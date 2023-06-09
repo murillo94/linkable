@@ -4,7 +4,8 @@ import { bioSchema } from "./schema";
 
 async function getData() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/murillo94/linkable/main/src/app/data.json"
+    "https://raw.githubusercontent.com/murillo94/linkable/main/src/app/data.json",
+    { cache: "no-store" }
   );
 
   if (!res.ok) {
