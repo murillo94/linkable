@@ -2,14 +2,18 @@
 
 import { Box, Text, Flex, Link } from "@chakra-ui/react";
 import Image from "next/image";
-import data from "../data.json";
 
 import type * as CSS from "csstype";
+import type { Bio } from "../schema";
 
 const mainBackgroundColor = "#D1DAFC";
 const linkBackgroundColor = "#D1DAFC20";
 
-export default function Bio() {
+interface Props {
+  data: Bio;
+}
+
+export default function Bio({ data }: Props) {
   return (
     <Box
       as="main"
