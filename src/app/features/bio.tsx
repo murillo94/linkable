@@ -44,7 +44,13 @@ export default function Bio({ data }: Props) {
             height="118px"
             marginTop="-16"
           >
-            <Image src="/tibo-1.jpg" alt="Tibo's face" priority fill />
+            <Image
+              src="/tibo-1.jpg"
+              alt={data.title}
+              priority
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
           </Box>
           <Flex
             flexDirection="column"
@@ -112,9 +118,10 @@ export default function Bio({ data }: Props) {
                           ? `/${link.provider?.key}.jpg`
                           : link.imageUrl
                       }
-                      alt="Logo"
+                      alt={link.title}
                       priority
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </Box>
                   <Text
