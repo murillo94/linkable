@@ -93,10 +93,13 @@ export default function Bio({ data }: Props) {
                   borderRadius="2xl"
                   textDecoration="none"
                   display="flex"
-                  alignItems="center"
+                  flexDirection={link.provider ? "row" : ["column", "row"]}
+                  alignItems={
+                    link.provider ? "center" : ["flex-start", "center"]
+                  }
                   textTransform="none"
                   textDecor="none"
-                  gap={6}
+                  gap={[4, 2]}
                   flex={1}
                   _hover={{
                     backgroundColor: link.provider
@@ -127,7 +130,7 @@ export default function Bio({ data }: Props) {
                   <Text
                     fontSize="sm"
                     fontWeight="normal"
-                    textAlign="center"
+                    textAlign={["left", "center"]}
                     flex={1}
                   >
                     {link.title}
