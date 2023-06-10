@@ -3,6 +3,7 @@ import { z } from "zod";
 export const bioSchema = z.object({
   title: z.string(),
   description: z.string(),
+  imageUrl: z.string(),
   section: z.array(
     z.object({
       title: z.string(),
