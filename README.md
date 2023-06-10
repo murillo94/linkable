@@ -6,6 +6,12 @@ This demo simulates API fetch to be render as SRR. Otherwise we can just get the
 
 https://linkable-zeta.vercel.app
 
+## Features
+
+- Initial animation
+- List/Grid view button on header
+- Reorder list item with animation when hovering the section title
+
 ---
 
 ![Final bundle image](./final-bundle.png)

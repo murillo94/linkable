@@ -53,17 +53,6 @@
       "title": "More about me",
       "links": [
         {
-          "title": "Archive",
-          "description": "Home for Steve's story",
-          "siteUrl": "https://stevejobsarchive.com/",
-          "imageUrl": "/stevejobsarchive.jpg",
-          "provider": {
-            "key": "stevejobsarchive",
-            "backgroundColor": "#33333315",
-            "backgroundColorHover": "#33333340"
-          }
-        },
-        {
           "title": "Remembering Steve",
           "description": "Memories, thoughts, and feelings about Steve",
           "siteUrl": "https://www.apple.com/stevejobs/",
@@ -72,6 +61,17 @@
             "key": "apple",
             "backgroundColor": "#adadad15",
             "backgroundColorHover": "#adadad40"
+          }
+        },
+        {
+          "title": "Archive",
+          "description": "Home for Steve's story",
+          "siteUrl": "https://stevejobsarchive.com/",
+          "imageUrl": "/stevejobsarchive.jpg",
+          "provider": {
+            "key": "stevejobsarchive",
+            "backgroundColor": "#33333315",
+            "backgroundColorHover": "#33333340"
           }
         }
       ]

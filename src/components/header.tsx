@@ -1,11 +1,27 @@
 "use client";
 
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 
 import { Bio } from "../schema";
 
 import type { ReactNode } from "react";
+
+const imageVariants: Variants = {
+  offscreen: {
+    y: -300,
+  },
+  onscreen: {
+    y: -80,
+    rotate: -6,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
 
 interface Props {
   children?: ReactNode;
@@ -32,33 +48,40 @@ export function Header({
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      gap={6}
       position="relative"
     >
-      <Box
-        borderWidth={2}
-        borderStyle="solid"
-        borderColor="white"
-        borderRadius="2xl"
-        overflow="hidden"
-        position="relative"
-        width="100px"
-        height="118px"
-        marginTop={-16}
+      <motion.div
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
       >
-        <Image
-          src={imageUrl}
-          alt={title}
-          priority
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </Box>
+        <motion.div variants={imageVariants}>
+          <Box
+            borderWidth={4}
+            borderStyle="solid"
+            borderColor="white"
+            borderRadius="2xl"
+            overflow="hidden"
+            position="relative"
+            width="6.25rem"
+            height="7.375rem"
+          >
+            <Image
+              src={imageUrl}
+              alt={title}
+              priority
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Box>
+        </motion.div>
+      </motion.div>
       <Flex
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
         gap={1}
+        marginTop={-12}
       >
         <Text fontSize="2xl" fontWeight="semibold" textAlign="center">
           {title}

@@ -55,8 +55,8 @@ export function InfoLink({ data, color, variant = "column" }: Props) {
         borderRadius="lg"
         overflow="hidden"
         position="relative"
-        width="36px"
-        height="36px"
+        width="2.25rem"
+        height="2.25rem"
       >
         <Image
           src={data.provider ? `/${data.provider.key}.jpg` : data.imageUrl}

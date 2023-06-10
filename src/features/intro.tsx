@@ -18,7 +18,7 @@ export function Intro() {
   return (
     <Flex
       width={["100%", 600]}
-      marginY={20}
+      marginY={24}
       marginX="auto"
       paddingX={[6, 0]}
       flexDirection="column"

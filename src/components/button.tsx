@@ -18,9 +18,9 @@ export function Button({ ariaLabel, icon, onClick }: Props) {
       onClick={onClick}
       backgroundColor="#ffffff20"
       _hover={{ backgroundColor: "#ffffff40" }}
-      minWidth="20px"
-      width="36px"
-      height="36px"
+      minWidth="1.25rem"
+      width="2.25rem"
+      height="2.25rem"
       borderRadius="2xl"
     />
   );
