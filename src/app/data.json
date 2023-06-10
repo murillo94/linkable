@@ -2,25 +2,27 @@
   "title": "Tibo Louis-Lucas",
   "description": "Founder - Taplio & Tweet Hunter",
   "imageUrl": "/tibo-1.jpg",
-  "section": [
+  "sections": [
     {
       "title": "Companies",
-      "format": "column",
       "links": [
         {
-          "title": "Taplio - Leverage the power of AI for LinkedIn",
+          "title": "Taplio",
+          "description": "Leverage the power of AI for LinkedIn",
           "siteUrl": "https://taplio.com",
           "imageUrl": "/taplio.jpg",
           "provider": null
         },
         {
-          "title": " Tweet Hunter - Grow Your Twitter Audience by Tweeting Like The Best",
+          "title": "Tweet Hunter",
+          "description": "Grow Your Twitter Audience by Tweeting Like The Best",
           "siteUrl": "https://tweethunter.io",
           "imageUrl": "/pony-express.jpg",
           "provider": null
         },
         {
-          "title": "Pony Express - We build stuff for creators and makers",
+          "title": "Pony Express",
+          "description": "We build stuff for creators and makers",
           "siteUrl": "https://ponyexpress.studio",
           "imageUrl": "/tweet-hunter.jpg",
           "provider": null
@@ -29,22 +31,24 @@
     },
     {
       "title": "Interviews",
-      "format": "column",
       "links": [
         {
-          "title": "Zero to Millions in 18 Months ft. Tibo Louis-Lucas",
+          "title": "You Inc. Podcast",
+          "description": "Zero to Millions in 18 Months ft. Tibo Louis-Lucas",
           "siteUrl": "https://www.youtube.com/watch?v=WIdavUqL-ZI",
           "imageUrl": "/youtube.jpg",
           "provider": null
         },
         {
-          "title": "INDIE MAKERS: #94 Tibo Louis-Lucas on Apple Podcasts",
+          "title": "INDIE MAKERS",
+          "description": "#94 Tibo Louis-Lucas on Apple Podcasts",
           "siteUrl": "https://podcasts.apple.com/il/podcast/94-tibo-louis-lucas/id1488437972?i=1000581647155",
           "imageUrl": "/apple.jpg",
           "provider": null
         },
         {
-          "title": "Million Dollar Exits Ep.1 with Tibo Louis-Lucas",
+          "title": "Million Dollar Exits",
+          "description": "Ep.1 with Tibo Louis-Lucas",
           "siteUrl": "https://www.buildinpublicpodcast.com/50",
           "imageUrl": "/buildinpublicpodcast.jpg",
           "provider": null
@@ -53,26 +57,27 @@
     },
     {
       "title": "More about me",
-      "format": "row",
       "links": [
         {
-          "title": "Linkedin",
-          "siteUrl": "https://www.linkedin.com/in/thibaultll/",
-          "imageUrl": "/linkedin.jpg",
-          "provider": {
-            "key": "linkedin",
-            "backgroundColor": "#0077b515",
-            "backgroundColorHover": "#0077b540"
-          }
-        },
-        {
           "title": "Twitter",
+          "description": "Best social media",
           "siteUrl": "https://twitter.com/tibo_maker",
           "imageUrl": "/twitter.jpg",
           "provider": {
             "key": "twitter",
             "backgroundColor": "#1d9bf015",
             "backgroundColorHover": "#1d9bf040"
+          }
+        },
+        {
+          "title": "Linkedin",
+          "description": "Second best social media",
+          "siteUrl": "https://www.linkedin.com/in/thibaultll/",
+          "imageUrl": "/linkedin.jpg",
+          "provider": {
+            "key": "linkedin",
+            "backgroundColor": "#0077b515",
+            "backgroundColorHover": "#0077b540"
           }
         }
       ]

@@ -5,7 +5,11 @@ import { bioSchema } from "./schema";
 async function getData() {
   const res = await fetch(
     "https://raw.githubusercontent.com/murillo94/linkable/main/src/app/data.json",
-    { cache: "no-store" }
+    {
+      next: {
+        revalidate: 0,
+      },
+    }
   );
 
   if (!res.ok) {

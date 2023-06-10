@@ -7,13 +7,16 @@ import { Bio } from "../schema";
 
 import { mainBackgroundColor } from "../constants";
 
+import type { ReactNode } from "react";
+
 interface Props {
+  children?: ReactNode;
   title: Bio["title"];
   description: Bio["description"];
   imageUrl: Bio["imageUrl"];
 }
 
-export function Header({ title, description, imageUrl }: Props) {
+export function Header({ children, title, description, imageUrl }: Props) {
   return (
     <Flex
       as="header"
@@ -25,6 +28,7 @@ export function Header({ title, description, imageUrl }: Props) {
       alignItems="center"
       justifyContent="center"
       gap={6}
+      position="relative"
     >
       <Box
         borderWidth={2}
@@ -58,6 +62,7 @@ export function Header({ title, description, imageUrl }: Props) {
           {description}
         </Text>
       </Flex>
+      {children}
     </Flex>
   );
 }
