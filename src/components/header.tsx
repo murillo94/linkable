@@ -5,8 +5,6 @@ import Image from "next/image";
 
 import { Bio } from "../schema";
 
-import { mainBackgroundColor } from "../constants";
-
 import type { ReactNode } from "react";
 
 interface Props {
@@ -14,15 +12,22 @@ interface Props {
   title: Bio["title"];
   description: Bio["description"];
   imageUrl: Bio["imageUrl"];
+  color: Bio["color"];
 }
 
-export function Header({ children, title, description, imageUrl }: Props) {
+export function Header({
+  children,
+  title,
+  description,
+  imageUrl,
+  color,
+}: Props) {
   return (
     <Flex
       as="header"
-      backgroundColor={mainBackgroundColor}
-      paddingY="8"
-      paddingX={["10", "28"]}
+      backgroundColor={color}
+      paddingY={8}
+      paddingX={[10, 28]}
       borderRadius="2xl"
       flexDirection="column"
       alignItems="center"
@@ -39,7 +44,7 @@ export function Header({ children, title, description, imageUrl }: Props) {
         position="relative"
         width="100px"
         height="118px"
-        marginTop="-16"
+        marginTop={-16}
       >
         <Image
           src={imageUrl}

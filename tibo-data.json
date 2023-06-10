@@ -1,7 +1,8 @@
 {
   "title": "Tibo Louis-Lucas",
   "description": "Founder - Taplio & Tweet Hunter",
-  "imageUrl": "/tibo-1.jpg",
+  "imageUrl": "/tibo.jpg",
+  "color": "#d1dafc",
   "sections": [
     {
       "title": "Companies",

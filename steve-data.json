@@ -1,0 +1,80 @@
+{
+  "title": "Steve Jobs",
+  "description": "Inventor, designer, and entrepreneur",
+  "imageUrl": "/steve.jpg",
+  "color": "#f4cd9c",
+  "sections": [
+    {
+      "title": "Companies",
+      "links": [
+        {
+          "title": "Apple Computer Inc.",
+          "description": "Leverage the power of AI for LinkedIn",
+          "siteUrl": "https://apple.com",
+          "imageUrl": "/apple.jpg",
+          "provider": null
+        },
+        {
+          "title": "NeXT computer",
+          "description": "Grow Your Twitter Audience by Tweeting Like The Best",
+          "siteUrl": "https://en.wikipedia.org/wiki/NeXT",
+          "imageUrl": "/next.jpg",
+          "provider": null
+        }
+      ]
+    },
+    {
+      "title": "Books",
+      "links": [
+        {
+          "title": "Walter Isaacson ",
+          "description": "Steve Jobs",
+          "siteUrl": "https://www.amazon.com/Steve-Jobs-Walter-Isaacson/dp/1451648537",
+          "imageUrl": "/amazon.jpg",
+          "provider": null
+        },
+        {
+          "title": "Karen Blumenthal",
+          "description": "Steve Jobs: The Man Who Thought Different: A Biography",
+          "siteUrl": "https://www.amazon.com/Steve-Jobs-Thought-Different-Biography/dp/125001445X",
+          "imageUrl": "/amazon.jpg",
+          "provider": null
+        },
+        {
+          "title": "Pam Pollack",
+          "description": "Who Was Steve Jobs?",
+          "siteUrl": "https://www.amazon.com/Who-Was-Steve-Jobs-Pollack/dp/0448462117",
+          "imageUrl": "/amazon.jpg",
+          "provider": null
+        }
+      ]
+    },
+    {
+      "title": "More about me",
+      "links": [
+        {
+          "title": "Archive",
+          "description": "Home for Steve's story",
+          "siteUrl": "https://stevejobsarchive.com/",
+          "imageUrl": "/stevejobsarchive.jpg",
+          "provider": {
+            "key": "stevejobsarchive",
+            "backgroundColor": "#33333315",
+            "backgroundColorHover": "#33333340"
+          }
+        },
+        {
+          "title": "Remembering Steve",
+          "description": "Memories, thoughts, and feelings about Steve",
+          "siteUrl": "https://www.apple.com/stevejobs/",
+          "imageUrl": "/apple.jpg",
+          "provider": {
+            "key": "apple",
+            "backgroundColor": "#adadad15",
+            "backgroundColorHover": "#adadad40"
+          }
+        }
+      ]
+    }
+  ]
+}

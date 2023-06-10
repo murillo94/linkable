@@ -4,6 +4,7 @@ export const bioSchema = z.object({
   title: z.string(),
   description: z.string(),
   imageUrl: z.string(),
+  color: z.string(),
   sections: z.array(
     z.object({
       title: z.string(),

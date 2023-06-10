@@ -35,7 +35,7 @@ interface Props {
   data: Bio;
 }
 
-export default function Bio({ data }: Props) {
+export function Bio({ data }: Props) {
   const [format, setFormat] = useState<BioSectionFormat>("column");
 
   const handleFormat = () => {
@@ -43,14 +43,15 @@ export default function Bio({ data }: Props) {
   };
 
   return (
-    <Box width={["100%", 600]} marginY={20} marginX="auto" paddingX={["6", 0]}>
+    <Box width={["100%", 600]} marginY={20} marginX="auto" paddingX={[6, 0]}>
       <Flex gap={20} flexDirection="column">
         <Header
           title={data.title}
           description={data.description}
           imageUrl={data.imageUrl}
+          color={data.color}
         >
-          <Box position="absolute" right="0" bottom="0">
+          <Box position="absolute" right={0} bottom={0}>
             <Button
               ariaLabel={icons[format].label}
               icon={icons[format].icon}
@@ -61,7 +62,12 @@ export default function Bio({ data }: Props) {
         {data.sections.map((section) => (
           <Section key={section.title} variant={format} title={section.title}>
             {section.links.map((link) => (
-              <InfoLink key={link.siteUrl} variant={format} data={link} />
+              <InfoLink
+                key={link.siteUrl}
+                variant={format}
+                data={link}
+                color={data.color}
+              />
             ))}
           </Section>
         ))}

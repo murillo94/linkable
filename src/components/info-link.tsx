@@ -3,38 +3,35 @@
 import { Box, Flex, Link as LinkBase, Text } from "@chakra-ui/react";
 import Image from "next/image";
 
-import { linkBackgroundColor, mainBackgroundColor } from "../constants";
-
 import type { Variants } from "../types";
-import type { BioSectionLink } from "../schema";
+import type { Bio, BioSectionLink } from "../schema";
 
 const variants = {
   row: {
     flexDirection: "column",
     alignItems: "flex-start",
     textAlign: "left",
-    gap: 4,
   },
   column: {
     flexDirection: ["column", "row"],
     alignItems: ["flex-start", "center"],
     textAlign: ["left", "center"],
-    gap: 4,
   },
 } satisfies Variants;
 
 interface Props {
   data: BioSectionLink;
+  color: Bio["color"];
   variant?: keyof typeof variants;
 }
 
-export function InfoLink({ data, variant = "column" }: Props) {
+export function InfoLink({ data, color, variant = "column" }: Props) {
   return (
     <LinkBase
       href={data.siteUrl}
       target="_blank"
-      padding={["6", data.provider ? "4" : "6"]}
-      backgroundColor={data.provider?.backgroundColor || linkBackgroundColor}
+      padding={[6, data.provider ? 4 : 6]}
+      backgroundColor={data.provider?.backgroundColor || `${color}20`}
       boxShadow="0 2px 4px rgba(0, 0, 0, .04)"
       borderWidth={1}
       borderStyle="solid"
@@ -42,15 +39,14 @@ export function InfoLink({ data, variant = "column" }: Props) {
       borderRadius="2xl"
       textDecoration="none"
       display="flex"
-      flexDirection={data.provider ? "row" : variants[variant].flexDirection}
-      alignItems={data.provider ? "center" : variants[variant].alignItems}
+      flexDirection={variants[variant].flexDirection}
+      alignItems={variants[variant].alignItems}
       textTransform="none"
       textDecor="none"
-      gap={variants[variant].gap}
+      gap={4}
       flex={1}
       _hover={{
-        backgroundColor:
-          data.provider?.backgroundColorHover || mainBackgroundColor,
+        backgroundColor: data.provider?.backgroundColorHover || color,
       }}
       _first={{ minWidth: "30%" }}
     >
@@ -70,7 +66,7 @@ export function InfoLink({ data, variant = "column" }: Props) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </Box>
-      <Flex flexDirection="column" alignItems="flex-start">
+      <Flex flexDirection="column" alignItems="flex-start" gap={[1, 0]}>
         <Text
           fontSize="md"
           fontWeight="medium"
